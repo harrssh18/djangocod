@@ -1,0 +1,36 @@
+{% extends 'client/base.html' %}
+{% block title %} Profile{% endblock title%}
+
+{%block body %}
+<div class="row mt-3">
+
+<div class="card text-center" style="width: 14rem;">
+  <div class="card-header bg-info text-white">
+    <b>User Details</b>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><b>Username</b> {{username}}</li>
+    <li class="list-group-item"><b>Email</b> {{email}}</li>
+    <li class="list-group-item"><b>Age</b> {{age}}</li>
+    <li class="list-group-item"><b>Weight</b> {{weight}}</li>
+    <li class="list-group-item"><b>Height</b> {{height}}</li>
+    {% if plan %}
+    <li class="list-group-item"><b>Plan Days:</b> {{plan}}</li>
+    {% endif %}
+
+  </ul>
+</div>
+{% if plan %}
+  {% for i in plan|times %}
+    <li>i</li>
+  {% endfor %}
+<p></p>
+{% else %}
+<div class="container row-3 col-sm-3 mt-5">
+  <p>You don't have purchase any plans...</p>
+    <a href="/plans" class="btn btn-warning">Add Plans</a>
+</div>
+
+{% endif %}
+</div>
+{% endblock body%}

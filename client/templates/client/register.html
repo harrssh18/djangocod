@@ -1,0 +1,16 @@
+{% extends 'client/base.html' %}
+{% block title %}Registration form{%endblock title%}
+{%block body%}
+
+<div class="col-sm-5 offset-3 mt-5">
+<form action="" method="POST" novalidate>
+	<h3>Registration From</h3>
+		{% csrf_token %}
+		{% for form in fm %}
+			{{form.label_tag}} {{form}} {{form.errors | striptags}} <br>
+		{% endfor %}
+		<br>
+		<button type="submit" class="btn btn-warning">Register</button>
+	</form>
+</div>
+{%endblock body%} 

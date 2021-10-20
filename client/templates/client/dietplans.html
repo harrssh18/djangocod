@@ -1,0 +1,58 @@
+{% extends 'client/base.html' %}
+{% block title %} Diet Plans{% endblock title%}
+
+{%block body %}
+
+<div class="card mt-3 ml-3" style="width: 97%;">
+  <div class="card-header text-center bg-info text-white mb-2">
+    <b>Diet Plans</b>
+  </div>
+  <div class="container mt-2 text-center mb-3" ><button class="btn-info"><b>Day:</b> {{day}}&#160; &#160; <b>Cost:</b> {{cost}}&#160; &#160;  	<b>Meal:</b> {{meal}}</button></div>
+
+
+<div class="row">
+<div class="card col-sm-2" style="margin-left: 7%;">
+  <div class="card-header text-center bg-info text-white mb-2">
+    <b>Break fast Meal Plans</b>
+  </div>
+  <p><b>Break fast: </b> {{bf_name}}</p><hr>
+  <p><b>Description:</b> {{bf_desc}}</p><hr>
+  <p><b>Ingredient:</b> {{bf_ingre}}</p><hr>
+</div>
+<div class="card col-sm-2 ml-2">
+  <div class="card-header text-center bg-info text-white mb-2">
+    <b>Morning Snacks Meal </b>
+  </div>
+  <p><b>Morning Snacks: </b> {{ms_name}}</p><hr>
+  <p><b>Description:</b> {{ms_desc}}</p><hr>
+  <p><b>Ingredient:</b> {{ms_ingre}}</p><hr>
+</div>
+<div class="card col-sm-2 ml-2">
+  <div class="card-header text-center bg-info text-white mb-2">
+    <b>Lunch Meal </b>
+  </div>
+  <p><b>Lunch: </b> {{lu_name}}</p><hr>
+  <p><b>Description:</b> {{lu_desc}}</p><hr>
+  <p><b>Ingredient:</b> {{lu_ingre}}</p><hr>
+</div>
+<div class="card col-sm-2 ml-2">
+  <div class="card-header text-center bg-info text-white mb-2">
+    <b>Afternoon Snacks Meal </b>
+  </div>
+  <p><b>Afternoon Snacks: </b> {{as_name}}</p><hr>
+  <p><b>Description:</b> {{as_desc}}</p><hr>
+  <p><b>Ingredients:</b> {{as_ingre}}</p><hr>
+</div>
+<div class="card col-sm-2 ml-2">
+  <div class="card-header text-center bg-info text-white mb-2">
+    <b>Dinner Meal </b>
+  </div>
+  <p><b>Dinner: </b> {{di_name}}</p><hr>
+  <p><b>Description:</b> {{di_desc}}</p><hr>
+  <p><b>Ingredients:</b> {{di_ingre}}</p><hr>
+</div>
+
+</div>
+<br>
+</div>
+{% endblock body %}

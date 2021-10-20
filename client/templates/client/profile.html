@@ -21,10 +21,10 @@
   </ul>
 </div>
 {% if plan %}
-  {% for i in plan|times %}
-    <li>i</li>
-  {% endfor %}
-<p></p>
+{{days_data}}
+{% for i in range %}
+    <a href="/getdata/{{i}}"><div style="width: 80px; height: 35px; border: 1px solid black;" class="btn-warning text-center">{{i}}</div></a>
+{% endfor %}
 {% else %}
 <div class="container row-3 col-sm-3 mt-5">
   <p>You don't have purchase any plans...</p>

@@ -24,4 +24,5 @@ urlpatterns = [
     path('profile/',views.userprofile,name='profile'),
     path('plans/',views.plans,name='plans'),
     path('plans/<int:days>',views.plans,name='plans'),
+    path('getdata/<str:day>',views.getdata,name='plans'),
 ]
